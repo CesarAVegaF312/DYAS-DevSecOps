@@ -58,7 +58,7 @@ public final class Reserva {
         validarSala(sala);
         validarResponsable(responsable);
         validarHorario(fecha, inicio, fin, hoy);
-        if (!StringUtils.hasText(registradaPor)) { {
+        if (!StringUtils.hasText(registradaPor)) {
             throw new ReservaInvalidaException("Toda reserva debe indicar quién la registró");
         }
         return new Reserva(UUID.randomUUID(), sala, responsable, fecha, inicio, fin, registradaPor,
